@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/codyhouse-style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css"> <!-- Theme style -->
+    {% if page.background %}
+    <style>
+    article header {
+        background-image: url("/img/{{ page.background }}");
+        background-image: linear-gradient(rgba(0,0,0,0.5) 0, rgba(0,0,0,0.5) 100%),
+            url("/img/{{ page.background }}");
+    }
+    </style>
+    {% endif %}
+    <title>{{ site.title }}</title>
+</head>
+
+<body class="{{ page.bodyclass }}">
+    <header id="banner" role="banner">
+        <h1>{{ site.title }}</h1>
+        <p>A Jekyll theme based on the <a href="https://codyhouse.co/gem/vertical-timeline/">Codyhouse Vertical Timeline</a>.</p>
+    </header>
+    <main id="main" role="main">
+        {{ content }}
+    </main>
+    <script src="{{ site.baseurl }}/js/main.js"></script> <!-- Resource JavaScript -->
+</body>
+</html>

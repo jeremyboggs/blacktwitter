@@ -1,0 +1,25 @@
+---
+layout: default
+title: Vertical Timeline Theme
+bodyclass: home
+---
+
+
+    <section class="cd-timeline js-cd-timeline">
+		<div class="cd-timeline__container">
+            {% for post in site.posts %}
+            <div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+					<img src="/img/cd-icon-picture.svg" alt="">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <p>{{ post.excerpt }}</p>
+                    <span class="cd-timeline__date">{{ post.date | date: "%B %-d, %Y" }}</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+            {% endfor %}
+        </div>
+    </section>
+

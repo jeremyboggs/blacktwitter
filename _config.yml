@@ -1,0 +1,24 @@
+# Global Site Information
+title: Vertical Timeline Theme
+author:
+url: ""
+baseurl: ""
+permalink: /:title/
+sass:
+  sass_dir: _sass
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      bodyclass: "post"
